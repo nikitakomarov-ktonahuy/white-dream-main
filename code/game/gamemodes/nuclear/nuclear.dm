@@ -10,9 +10,9 @@
 	enemy_minimum_age = 14
 
 	announce_span = "danger"
-	announce_text = "Syndicate forces are approaching the station in an attempt to destroy it!\n\
-	<span class='danger'>Operatives</span>: Secure the nuclear authentication disk and use your nuke to destroy the station.\n\
-	<span class='notice'>Crew</span>: Defend the nuclear authentication disk and ensure that it leaves with you on the emergency shuttle."
+	announce_text = "Силы синдиката направляются на вашу станцию в попытке уничтожить её!\n\
+	<span class='danger'>Operatives</span>: Заберите диск и уничтожье станцию с помощью вашей ядерной бомбы.\n\
+	<span class='notice'>Crew</span>: Защищайте диск и убедитесь в том что он полетит с вами на ЦК"
 
 	var/const/agents_possible = 5 //If we ever need more syndicate agents.
 	var/nukes_left = 1 // Call 3714-PRAY right now and order more nukes! Limited offer!
@@ -103,9 +103,10 @@
 			SSticker.news_report = OPERATIVE_SKIRMISH
 
 /datum/game_mode/nuclear/generate_report()
-	return "One of Central Command's trading routes was recently disrupted by a raid carried out by the Gorlex Marauders. They seemed to only be after one ship - a highly-sensitive \
-			transport containing a nuclear fission explosive, although it is useless without the proper code and authorization disk. While the code was likely found in minutes, the only disk that \
-			can activate this explosive is on your station. Ensure that it is protected at all times, and remain alert for possible intruders."
+	return "Один из торговых путей ЦК был недавно разломлен рейдом мародёров Горлекс. Они летели только за 
+	одним кораблём - содержащим ядерную бомбу, бесполезную без кода и диска. Пока код скорее всего был найден за считанные минуты,
+	единственный диск который может активировать эту бомбу находится на вашей станции. Удостоверьтесь что он всегда под защитой, и 
+	оставайтесь на готове для отражения возможной атаки мародёров."
 
 /proc/is_nuclear_operative(mob/M)
 	return M && istype(M) && M.mind && M.mind.has_antag_datum(/datum/antagonist/nukeop)
