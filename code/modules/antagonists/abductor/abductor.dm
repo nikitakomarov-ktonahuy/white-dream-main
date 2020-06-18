@@ -1,7 +1,7 @@
 #define ABDUCTOR_MAX_TEAMS 4
 
 /datum/antagonist/abductor
-	name = "Abductor"
+	name = "Абдуктор"
 	roundend_category = "abductors"
 	antagpanel_category = "Abductor"
 	job_rank = ROLE_ABDUCTOR
@@ -17,19 +17,19 @@
 
 
 /datum/antagonist/abductor/agent
-	name = "Abductor Agent"
+	name = "Абдуктор-агент"
 	sub_role = "Agent"
 	outfit = /datum/outfit/abductor/agent
 	landmark_type = /obj/effect/landmark/abductor/agent
-	greet_text = "Use your stealth technology and equipment to incapacitate humans for your scientist to retrieve."
+	greet_text = "Используйте ваши стелс-технологии и оборудование для похищения людей для вашего учёного."
 	show_in_antagpanel = TRUE
 
 /datum/antagonist/abductor/scientist
-	name = "Abductor Scientist"
+	name = "Абдуктор-учёный"
 	sub_role = "Scientist"
 	outfit = /datum/outfit/abductor/scientist
 	landmark_type = /obj/effect/landmark/abductor/scientist
-	greet_text = "Use your experimental console and surgical equipment to monitor your agent and experiment upon abducted humans."
+	greet_text = "Используйте вашу экспериментальную консоль и хирургическое оборудование для слежки за агентом и экспериментирования над похищенными людьми."
 	show_in_antagpanel = TRUE
 
 /datum/antagonist/abductor/scientist/onemanteam
@@ -166,7 +166,7 @@
 	return "<div class='panel redborder'>[result.Join("<br>")]</div>"
 
 /datum/antagonist/abductee
-	name = "Abductee"
+	name = "Похищенный"
 	roundend_category = "abductees"
 	antagpanel_category = "Abductee"
 	antag_hud_type = ANTAG_HUD_ABDUCTOR
@@ -212,7 +212,7 @@
 	target_amount = 6
 
 /datum/objective/experiment/New()
-	explanation_text = "Experiment on [target_amount] humans."
+	explanation_text = "Проведите эксперименты на [target_amount] людях."
 
 /datum/objective/experiment/check_completion()
 	for(var/obj/machinery/abductor/experiment/E in GLOB.machines)
